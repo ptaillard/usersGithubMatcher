@@ -2,7 +2,8 @@
 (function() {
     'use strict';
 
-    angular.module('vendors', ['ngResource', 'ngAria', 'ngAnimate', 'ngMaterial']);
-    angular.module('usersGithubMatcherApp', ['vendors']);
-
+    angular.module('vendors', ['ngResource', 'ngRoute', 'ngAria', 'ngAnimate', 'ngMaterial']);
+    angular.module('selection', []);
+    angular.module('match', []);
+    angular.module('usersGithubMatcherApp', ['vendors', 'selection', 'match']);
 })();
