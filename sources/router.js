@@ -8,12 +8,12 @@
     function routeConfigurator($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'templates/select_users.html',
+                templateUrl: 'templates/select-users.html',
                 controller: 'SelectUsersCtrl',
                 controllerAs: 'selectUsers'
             })
             .when('/match/:firstuser/:seconduser', {
-                templateUrl: 'templates/match_users.html',
+                templateUrl: 'templates/match-users.html',
                 controller: 'MatchUsersCtrl',
                 controllerAs: 'matchUsers'
             })

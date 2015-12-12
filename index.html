@@ -13,6 +13,14 @@
     </head>
 
     <body>
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <h2>
+                    <span>Users Github Matcher</span>
+                </h2>
+                <span flex></span>
+            </div>
+        </md-toolbar>
         <ng-view></ng-view>
 
         <script src="vendors/angular/angular.min.js"></script>
@@ -25,9 +33,9 @@
 
         <!-- injector:js -->
         <script src="sources/app.js"></script>
-        <script src="sources/match/MatchUsersCtrl.js"></script>
+        <script src="sources/match/match-users-ctrl.js"></script>
         <script src="sources/router.js"></script>
-        <script src="sources/select/SelectUsersCtrl.js"></script>
+        <script src="sources/select/select-users-ctrl.js"></script>
         <!-- endinjector -->
     </body>
 </html>

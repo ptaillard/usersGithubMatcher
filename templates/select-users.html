@@ -1,0 +1,15 @@
+<md-content layout-padding>
+    <div layout-gt-sm="row">
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>First github user</label>
+            <input ng-model="selectUsers.firstuser">
+        </md-input-container>
+        <md-input-container class="md-block" flex-gt-sm>
+            <label>Second github user</label>
+            <input ng-model="selectUsers.seconduser">
+        </md-input-container>
+    </div>
+    <div layout-gt-sm="row">
+        <md-button type="button" class="md-raised md-primary" ng-click="selectUsers.launchMatch()">Match...</md-button>
+    </div>
+</md-content>
