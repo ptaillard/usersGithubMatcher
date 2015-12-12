@@ -15,6 +15,7 @@ module.exports = function (config) {
             'vendors/angular-animate/angular-animate.min.js',
             'vendors/angular-aria/angular-aria.min.js',
             'vendors/angular-resource/angular-resource.min.js',
+            'vendors/angular-route/angular-route.min.js',
             'vendors/angular-material/angular-material.min.js',
             'vendors/angular-mocks/angular-mocks.js',
             'vendors/underscore/underscore-min.js',
