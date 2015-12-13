@@ -23,7 +23,7 @@
             });
 
             $q.all([loadFirstUser,loadSecondUser]).then(function(res){
-                
+                //vm.match.result = ComputeMatchBetweenUsers.compute(vm.firstuser, vm.seconduser);
             });
         };
     };
