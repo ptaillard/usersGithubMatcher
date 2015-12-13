@@ -17,21 +17,21 @@
         MatchUsers.getData($routeParams.firstuser, $routeParams.seconduser);
 
         function isWinnerFirst(login) {
-            if(vm.firstuser === vm.match.result.winner.login) {
+            if (vm.firstuser === vm.match.result.winner.login) {
                 return true;
             }
             return false;
         };
 
         function isWinnerSecond(login) {
-            if(vm.seconduser === vm.match.result.winner.login) {
+            if (vm.seconduser === vm.match.result.winner.login) {
                 return true;
             }
             return false;
         };
 
         function resultAvailable() {
-            if(!_.isUndefined(vm.match.result.winner)) {
+            if (!_.isUndefined(vm.match.result.winner)) {
                 return true;
             }
             return false;
