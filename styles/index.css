@@ -1,0 +1,13 @@
+.avatar {
+    border-radius:50px;
+    width:100px;
+    height:100px;
+}
+
+.loser {
+    color: firebrick;
+}
+
+.winner {
+    color: darkgreen;
+}

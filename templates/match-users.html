@@ -1,1 +1,22 @@
-<span>match_users.html</span>
+<md-content class="md-padding" layout="row" >
+    <div layout-align="center" flex=50>
+        <div layout="column" layout-align="center center">
+            <h1>{{matchUsers.match.firstuser.login}}</h1>
+            <img ng-src="{{matchUsers.match.firstuser.avatar_url}}" class="avatar">
+        </div>
+        <div layout="column" ng-if="matchUsers.resultAvailable()" layout-align="center center">
+            <h1 ng-if="matchUsers.isWinnerFirst()" class="winner">Winner ({{matchUsers.match.result.winner.points}} points)</h1>
+            <h1 ng-if="matchUsers.isWinnerFirst() === false" class="loser">Loser ({{matchUsers.match.result.loser.points}} points)</h1>
+        </div>
+    </div>
+    <div layout-align="center" flex=50>
+        <div layout="column" layout-align="center center">
+            <h1>{{matchUsers.match.seconduser.login}}</h1>
+            <img ng-src="{{matchUsers.match.seconduser.avatar_url}}" class="avatar">
+        </div>
+        <div layout="column" ng-if="matchUsers.resultAvailable()" layout-align="center center">
+            <h1 ng-if="matchUsers.isWinnerSecond()" class="winner">Winner ({{matchUsers.match.result.winner.points}} points)</h1>
+            <h1 ng-if="matchUsers.isWinnerSecond() === false" class="loser">Loser ({{matchUsers.match.result.loser.points}} points)</h1>
+        </div>
+    </div>
+</md-content>
