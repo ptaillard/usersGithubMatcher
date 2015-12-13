@@ -1,3 +1,9 @@
+/* global expect */
+/* global it */
+/* global inject */
+/* global beforeEach */
+/* global Mocker */
+/* global describe */
 'use strict';
 
 describe('The SelectUsersCtrl controller', function () {
