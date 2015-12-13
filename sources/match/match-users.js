@@ -4,7 +4,7 @@
     angular.module('match')
         .service('MatchUsers', MatchUsers);
 
-    function MatchUsers($q, LoadUser) {
+    function MatchUsers($q, LoadUser, ComputeMatch) {
         var vm = this;
         vm.firstuser = {};
         vm.seconduser = {};
@@ -22,8 +22,8 @@
                 return data;
             });
 
-            $q.all([loadFirstUser,loadSecondUser]).then(function(res){
-                //vm.match.result = ComputeMatchBetweenUsers.compute(vm.firstuser, vm.seconduser);
+            $q.all([loadFirstUser,loadSecondUser]).then(function(res) {
+                vm.match.result = ComputeMatch.compute(vm.firstuser, vm.seconduser);
             });
         };
     };

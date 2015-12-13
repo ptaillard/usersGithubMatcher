@@ -10,17 +10,22 @@
 
         function compute(firstuser, seconduser) {
             var result = {
-                winner: {}
+                winner: {},
+                loser: {}
             };
 
             var firstUserPoints = TotalPointsCalculator.compute(firstuser);
             var secondUserPoints = TotalPointsCalculator.compute(seconduser);
-            if(firstUserPoints > secondUserPoints) {
+            if (firstUserPoints > secondUserPoints) {
                 result.winner.login = firstuser.login;
                 result.winner.points = firstUserPoints;
+                result.loser.login = seconduser.login;
+                result.loser.points = secondUserPoints;
             } else {
                 result.winner.login = seconduser.login;
                 result.winner.points = secondUserPoints;
+                result.loser.login = firstuser.login;
+                result.loser.points = firstUserPoints;
             }
             return result;
         };
