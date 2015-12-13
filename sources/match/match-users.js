@@ -6,24 +6,26 @@
 
     function MatchUsers($q, LoadUser, ComputeMatch) {
         var vm = this;
-        vm.firstuser = {};
-        vm.seconduser = {};
-        vm.match = {};
+        vm.match = {
+            firstuser: {},
+            seconduser: {},
+            result: {}
+        };
 
         vm.getData = getData;
 
         function getData(firstuser, seconduser) {
             var loadFirstUser = LoadUser.load(firstuser).then(function(data) {
-                _.extend(vm.firstuser, data);
+                vm.match.firstuser = data;
                 return data;
             });
             var loadSecondUser = LoadUser.load(seconduser).then(function(data) {
-                _.extend(vm.seconduser, data);
+                vm.match.seconduser = data;
                 return data;
             });
 
             $q.all([loadFirstUser,loadSecondUser]).then(function(res) {
-                vm.match.result = ComputeMatch.compute(vm.firstuser, vm.seconduser);
+                vm.match.result = ComputeMatch.compute(vm.match.firstuser, vm.match.seconduser);
             });
         };
     };
